@@ -164,10 +164,6 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                   align-items: center;
                   justify-content: center;
                 
-                
-
-
-
                 }
 
                 .codigo { color: ${a.codeColor}; font-weight: bold; }
