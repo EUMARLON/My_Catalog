@@ -166,13 +166,7 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                   justify-content: center;
                        
                 }
-                  .produto img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
-
-
+                  
 
                 .codigo { color: ${a.codeColor}; font-weight: bold; }
                 .descricao-clientes { color: ${a.descriptionColor}; }
