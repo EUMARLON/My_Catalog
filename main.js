@@ -167,10 +167,10 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                        
                 }
                   .produto img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
 
 
 
