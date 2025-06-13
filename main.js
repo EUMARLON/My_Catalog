@@ -141,6 +141,13 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                 .rodape p {
                   margin: 20px 20px; /* \u{1F539} Adiciona margem superior e inferior */
                 }
+                  .produto img {
+  width: 100%; /* A imagem ocupará todo o espaço disponível */
+  height: auto; /* Mantém proporção ao redimensionar */
+  max-width: 400px; /* Define um limite máximo para não ficar exagerado */
+}
+
+
                 
                 .produto {
                   border-radius: 12px;
