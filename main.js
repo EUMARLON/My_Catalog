@@ -160,29 +160,17 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                   position: relative !important; /* \u{1F539} Mant\xE9m cada produto fixo dentro do grid */
                   grid-column: span 1; /* \u{1F539} Garante que cada produto ocupe apenas uma c\xE9lula */
                   grid-row: span 1; /* \u{1F539} Mant\xE9m a altura fixa dentro do grid */
-                    display: grid;
-  grid-template-rows: auto 1fr auto; /* título - imagem - preço/textos */
-  grid-template-columns: 1fr;
-  height: 100%;
-  width: 100%;
-  resize: both;
-  overflow: auto;
-  align-items: center;
-  justify-items: center;
-  padding: 15px;
-  box-sizing: border-box;
-}
-
-
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                       
                 }
-.produto img {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain;
-  align-self: center;
-  justify-self: center;
-}
+                  .produto img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
 
 
 
