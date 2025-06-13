@@ -141,7 +141,6 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                 .rodape p {
                   margin: 20px 20px; /* \u{1F539} Adiciona margem superior e inferior */
                 }
-                  
                 
                 .produto {
                   border-radius: 12px;
@@ -164,9 +163,12 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                       
+                
+                
+
+
+
                 }
-                  
 
                 .codigo { color: ${a.codeColor}; font-weight: bold; }
                 .descricao-clientes { color: ${a.descriptionColor}; }
