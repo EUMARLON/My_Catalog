@@ -142,32 +142,43 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                   margin: 20px 20px; /* \u{1F539} Adiciona margem superior e inferior */
                 }
                 
-.produto {
-  display: grid;
-  grid-template-columns: 1fr; /* Apenas uma coluna */
-  grid-template-rows: 2fr 1fr; /* A imagem ocupa mais espaço */
-  width: auto;
-  height: auto;
-  resize: both;
-  overflow: hidden;
-  padding: 15px;
-  border: 2px solid ${a.cardBorderColor};
-  border-radius: 12px;
-}
+                .produto {
+                  border-radius: 12px;
+                  padding: 15px;
+                  border: 2px solid ${a.cardBorderColor}; /* \u{1F539} Agora usa a cor configur\xE1vel */
+                  text-align: center;
+                  background: #fff;
+                  width: auto;
+                  min-width: 250px;
+                  min-height: 350px;
+                  max-height: 800px;
+                  max-width: 800px;
+                  margin: auto;
+                  box-sizing: border-box;
+                  z-index: 9999 !important;
+                  position: relative !important; /* \u{1F539} Mant\xE9m cada produto fixo dentro do grid */
+                  grid-column: span 1; /* \u{1F539} Garante que cada produto ocupe apenas uma c\xE9lula */
+                  grid-row: span 1; /* \u{1F539} Mant\xE9m a altura fixa dentro do grid */
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  object-fit: contain;
+                  resize: both;
+                  overflow: hidden;
 
-.produto img {
-  grid-row: 1 / 2;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Garante que a imagem não ultrapasse o espaço */
-}
+                  
 
-.produto .descricao-clientes,
-.produto .preco-venda {
-  grid-row: 2 / 3;
-  text-align: center;
-  padding: 10px;
-  font-size: calc(1rem + 1vw);
+                
+                }
+                 .produto img {
+                 width: 90%;
+                 height: auto;
+                 object-fit: contain;
+}
+                .produto .descricao-clientes,
+                .produto .preco-venda {
+                 font-size: calc(1rem + 1vw); /* Ajusta tamanho proporcionalmente */
 }
 
 
