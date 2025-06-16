@@ -164,15 +164,24 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                   align-items: center;
                   justify-content: center;
                   object-fit: contain;
+                  resize: both;
+                  overflow: hidden;
+
+                  
 
                 
                 }
-                  .produto .descricao-clientes {
-  font-size: 2vw; /* Ajusta conforme o tamanho da tela */
+                 .produto img {
+                 width: 90%;
+                 height: auto;
+                 object-fit: contain;
 }
-.produto .preco-venda {
-  font-size: 2.5vw;
+                .produto .descricao-clientes,
+                .produto .preco-venda {
+                 font-size: calc(1rem + 1vw); /* Ajusta tamanho proporcionalmente */
 }
+
+
 
                 .codigo { color: ${a.codeColor}; font-weight: bold; }
                 .descricao-clientes { color: ${a.descriptionColor}; }
