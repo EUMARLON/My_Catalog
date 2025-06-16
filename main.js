@@ -163,6 +163,8 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
+                  object-fit: contain;
+
                 
                 }
                   .produto .descricao-clientes {
