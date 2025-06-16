@@ -143,6 +143,9 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                 }
                 
                 .produto {
+                  display: grid;
+                  grid-template-columns: 1fr; /* Apenas uma coluna */
+                  grid-template-rows: 60% 40%; /* Mantém proporção ao redimensionar */
                   border-radius: 12px;
                   padding: 15px;
                   border: 2px solid ${a.cardBorderColor}; /* \u{1F539} Agora usa a cor configur\xE1vel */
@@ -159,7 +162,6 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                   position: relative !important; /* \u{1F539} Mant\xE9m cada produto fixo dentro do grid */
                   grid-column: span 1; /* \u{1F539} Garante que cada produto ocupe apenas uma c\xE9lula */
                   grid-row: span 1; /* \u{1F539} Mant\xE9m a altura fixa dentro do grid */
-                  display: flex;
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
@@ -172,14 +174,25 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                 
                 }
                  .produto img {
-                 width: 90%;
-                 height: auto;
-                 object-fit: contain;
+                   grid-row: 1 / 2;
+                   width: 100%;
+                   height: 100%;
+                   object-fit: contain;
+                   min-width: 100px; /* Tamanho mínimo */
+                   min-height: 100px;
+                   max-width: 600px; /* Tamanho máximo */
+                   max-height: 600px;
+
+
 }
                 .produto .descricao-clientes,
                 .produto .preco-venda {
-                 font-size: calc(1rem + 1vw); /* Ajusta tamanho proporcionalmente */
+                  grid-row: 2 / 3;
+                  text-align: center;
+                  padding: 10px;
+                  font-size: calc(1rem + 1vw);
 }
+
 
 
 
