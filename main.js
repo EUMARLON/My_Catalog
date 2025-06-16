@@ -165,6 +165,12 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                   justify-content: center;
                 
                 }
+                  .produto .descricao-clientes {
+  font-size: 2vw; /* Ajusta conforme o tamanho da tela */
+}
+.produto .preco-venda {
+  font-size: 2.5vw;
+}
 
                 .codigo { color: ${a.codeColor}; font-weight: bold; }
                 .descricao-clientes { color: ${a.descriptionColor}; }
