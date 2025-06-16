@@ -161,10 +161,14 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
   min-height: 400px;
 }
 .produto img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+  min-width: 150px; /* Defina um tamanho mínimo */
+  max-width: 90%; /* Garante que a imagem não ultrapasse o produto */
+  min-height: 100px; /* Altura mínima */
+  max-height: 400px; /* Altura máxima */
+  object-fit: contain; /* Mantém a proporção da imagem */
 }
+
+
 
 .produto .descricao-clientes,
 .produto .preco-venda {
