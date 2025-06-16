@@ -142,58 +142,35 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                   margin: 20px 20px; /* \u{1F539} Adiciona margem superior e inferior */
                 }
                 
-                .produto {
-                  display: grid;
-                  grid-template-columns: 1fr; /* Apenas uma coluna */
-                  grid-template-rows: 60% 40%; /* Mantém proporção ao redimensionar */
-                  border-radius: 12px;
-                  padding: 15px;
-                  border: 2px solid ${a.cardBorderColor}; /* \u{1F539} Agora usa a cor configur\xE1vel */
-                  text-align: center;
-                  background: #fff;
-                  width: auto;
-                  min-width: 250px;
-                  min-height: 350px;
-                  max-height: 800px;
-                  max-width: 800px;
-                  margin: auto;
-                  box-sizing: border-box;
-                  z-index: 9999 !important;
-                  position: relative !important; /* \u{1F539} Mant\xE9m cada produto fixo dentro do grid */
-                  grid-column: span 1; /* \u{1F539} Garante que cada produto ocupe apenas uma c\xE9lula */
-                  grid-row: span 1; /* \u{1F539} Mant\xE9m a altura fixa dentro do grid */
-                  flex-direction: column;
-                  align-items: center;
-                  justify-content: center;
-                  object-fit: contain;
-                  resize: both;
-                  overflow: hidden;
-
-                  
-
-                
-                }
-                 .produto img {
-                   grid-row: 1 / 2;
-                   width: 100%;
-                   height: 100%;
-                   object-fit: contain;
-                   min-width: 100px; /* Tamanho mínimo */
-                   min-height: 100px;
-                   max-width: 600px; /* Tamanho máximo */
-                   max-height: 600px;
-
-
+.produtos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas flexíveis */
+  gap: 15px; /* Espaçamento entre produtos */
+  justify-items: center; /* Centraliza os itens */
 }
-                .produto .descricao-clientes,
-                .produto .preco-venda {
-                  grid-row: 2 / 3;
-                  text-align: center;
-                  padding: 10px;
-                  font-size: calc(1rem + 1vw);
+  .produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Espaçamento entre os elementos internos */
+  padding: 15px;
+  border: 2px solid ${a.cardBorderColor};
+  background: #fff;
+  width: 100%;
+  max-width: 350px; /* Ajuste conforme necessário */
+  min-height: 400px;
+}
+.produto img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-
+.produto .descricao-clientes,
+.produto .preco-venda {
+  font-size: 1rem;
+  text-align: center;
+}
 
 
                 .codigo { color: ${a.codeColor}; font-weight: bold; }
