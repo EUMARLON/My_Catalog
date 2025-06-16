@@ -145,15 +145,11 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
 .produto {
   display: grid;
   grid-template-columns: 1fr; /* Apenas uma coluna */
-  grid-template-rows: 60% 40%;
+  grid-template-rows: 2fr 1fr; /* A imagem ocupa mais espaço */
   width: auto;
   height: auto;
-  min-width: 250px;
-  min-height: 350px;
-  max-width: 800px;
-  max-height: 800px;
   resize: both;
-  overflow: hidden
+  overflow: hidden;
   padding: 15px;
   border: 2px solid ${a.cardBorderColor};
   border-radius: 12px;
@@ -163,14 +159,7 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
   grid-row: 1 / 2;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  min-width: 100px; /* Tamanho mínimo */
-  min-height: 100px;
-  max-width: 600px; /* Tamanho máximo */
-  max-height: 600px;
-}
-
-
+  object-fit: contain; /* Garante que a imagem não ultrapasse o espaço */
 }
 
 .produto .descricao-clientes,
