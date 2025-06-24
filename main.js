@@ -160,6 +160,7 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
   width: 100%;
   max-width: 350px; /* Ajuste conforme necessário */
   min-height: 400px;
+  border-radius: 12px;
 }
 .produto img {
   min-width: 150px; /* Defina um tamanho mínimo */
