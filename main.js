@@ -157,9 +157,10 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
   border: 2px solid ${a.cardBorderColor};
   background: #fff;
   width: 100%;
-  max-width: 350px; /* Ajuste conforme necessário */
-  min-height: 400px;
+  max-width: 400px; /* Ajuste conforme necessário */
+  min-height: 345px;
   border-radius: 12px;
+  min-widht: 150px;
 }
 .produto img {
   min-width: 150px; /* Defina um tamanho mínimo */
