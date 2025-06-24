@@ -156,7 +156,6 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
   padding: 15px;
   border: 2px solid ${a.cardBorderColor};
   background: #fff;
-  width: 100%;
   max-width: 400px; /* Ajuste conforme necessário */
   min-height: 345px;
   border-radius: 12px;
