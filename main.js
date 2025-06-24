@@ -149,7 +149,6 @@ ${t.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
   justify-items: center; /* Centraliza os itens */
 }
   .produto {
-  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
